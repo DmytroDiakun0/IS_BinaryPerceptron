@@ -84,4 +84,17 @@ public class BinaryPerceptron {
 		}
 		System.out.println();
 	}
+	
+	public int culcFuncResult(int[] x) {
+		double a = 0;
+		for(int j = 0; j < w.length; j++) {
+			a += x[j] * w[j];
+		}
+
+		if(a > threshold) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
 }
